@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">mobileSafe</string>
+    <string name="tv_black_number_title">黑名单管理</string>
+    <string name="tv_black_number_title_add">添加</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

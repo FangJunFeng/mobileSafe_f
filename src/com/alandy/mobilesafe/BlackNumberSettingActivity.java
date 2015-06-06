@@ -76,9 +76,9 @@ public class BlackNumberSettingActivity extends Activity {
 		boolean result = SystemInfo.isRunningService(this,
 				"com.alandy.mobilesafe.service.BlackNumberService");
 		if (result) {
-			cb_state.setClickable(true);
+			cb_state.setChecked(true);
 		}else {
-			cb_state.setClickable(false);
+			cb_state.setChecked(false);
 		}
 		if (cb_state.isChecked()) {
 			tv_desc.setText("已经开启");

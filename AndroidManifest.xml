@@ -4,20 +4,27 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <!-- android:versionCode 给开发人员用的版本号 -->
+    <!-- android:versionName 给用户看的版本号 -->
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="21" />
-	<uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.provider.Telephony.SMS_RECEIVED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <!-- 黑名单-->
+
+        <!-- 欢迎界面 -->
         <activity
-            android:name=".BlackNumberActivity"
+            android:name="com.alandy.mobilesafe.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +32,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 黑名单 -->
+        <!-- android:screenOrientation="portrait"  屏幕的朝向：竖值方向 -->
+        <activity
+            android:name="com.alandy.mobilesafe.BlackNumberActivity"
+            android:screenOrientation="portrait" >
+        </activity>
         <!-- 黑名单设置界面 -->
-        <activity android:name="com.alandy.mobilesafe.BlackNumberSettingActivity"></activity>
+        <activity android:name="com.alandy.mobilesafe.BlackNumberSettingActivity" >
+        </activity>
         <!-- 黑名单的服务 -->
-        <service android:name="com.alandy.mobilesafe.service.BlackNumberService"></service>
+        <service android:name="com.alandy.mobilesafe.service.BlackNumberService" >
+        </service>
     </application>
 
 </manifest>

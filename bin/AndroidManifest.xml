@@ -15,10 +15,13 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/main_icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
 
@@ -32,18 +35,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 黑名单 -->
+        <!-- 主界面界面 -->
+        <activity android:name="com.alandy.mobilesafe.MainActivity" />
+        <!-- 黑名单界面 -->
         <!-- android:screenOrientation="portrait"  屏幕的朝向：竖值方向 -->
         <activity
             android:name="com.alandy.mobilesafe.BlackNumberActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <!-- 黑名单设置界面 -->
-        <activity android:name="com.alandy.mobilesafe.BlackNumberSettingActivity" >
-        </activity>
+        <activity android:name="com.alandy.mobilesafe.BlackNumberSettingActivity" />
+        <!-- 软件管理界面 -->
+        <activity
+            android:name="com.alandy.mobilesafe.SoftwareActivity"
+            android:screenOrientation="portrait" />
+
+        
         <!-- 黑名单的服务 -->
-        <service android:name="com.alandy.mobilesafe.service.BlackNumberService" >
-        </service>
+        <service android:name="com.alandy.mobilesafe.service.BlackNumberService" />
     </application>
 
 </manifest>

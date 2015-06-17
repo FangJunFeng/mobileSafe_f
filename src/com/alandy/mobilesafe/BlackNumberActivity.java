@@ -22,9 +22,23 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * @author Fangjun
+ * ============================================================
  *
- */
+ * 版 权 ： 小楫轻舟工作室 版权所有 (c) 2015
+ *
+ * 作 者 : 冯方俊
+ *
+ * 版 本 ： 1.0
+ *
+ * 创建日期 ： 2015年6月7日 上午11:12:02
+ *
+ * 描 述 ：
+ *	黑名单的管理：拦截短信和电话号码
+ * 
+ * 修订历史 ：
+ *
+ * ============================================================
+ **/
 public class BlackNumberActivity extends Activity implements OnClickListener {
 	private Button bt_add_black_number, bt_open_setting;
 	private ListView lv_black_number;
